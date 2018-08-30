@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Kais Kawar">
+    <title>FIFA World Cup Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/dc.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="js/crossfilter.js"></script>
+    <script type="text/javascript" src="js/dc.min.js"></script>
+    <script type="text/javascript" src="js/dc-resizing.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kais Viz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="body">
+      <h1 class="my-4">FIFA World Cup Dashboard</h1>
+      <p class="sub-heading">An interactive visual dashboard with instant filters enabled to help you explore the world cup attendance over the years.</p>
+<!--       <div class="row justify-content-md-center" id="page-header">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 col-xl-12 " > 
+          <h1>Welcome to our World Cup Dashboard</h1>
+          <p>Filter on the visualizations below and explore the FIFA World Cup attendance over the years.</p>
+          <hr>
+        </div>
+      </div> -->
+
+      <div class="row justify-content-md-center" id="attendanceChart-wrapper">
+        <div class="col-sm-12"> 
+          <div id="attendanceChart"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-2" style="display:contents;">
+          <div class="form-group" id="selectTeam1">
+            <div class="chart-title">Home Team
+              <span>
+                <a class='reset' href='javascript:selectTeam("selectTeam1");'
+                   style='visibility: hidden;'>Reset Filters</a>
+              </span>
+            </div>
+          </div>
+          <div class="form-group" id="selectTeam2">
+            <div class="chart-title">Away Team
+              <span>
+                <a class='reset' href='javascript:selectTeam("selectTeam2");'
+                   style='visibility: hidden;'>Reset Filters</a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" id="stageChart"></div>
+
+        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" id="winnersChart">
+            <div class="chart-title">Winners</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Kais Viz 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>
