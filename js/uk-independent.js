@@ -83,7 +83,7 @@ function draw(geoData, dataIndep) {
       d3.select("h1").text("Countries that have gained independence from the UK");
       pathTooltip();
     }
-  }, 1500);
+  }, 1400);
 
   //if country is found in the array, return lightblue, else return white
   function updateCountries(d) {
