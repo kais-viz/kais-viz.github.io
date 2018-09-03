@@ -28,28 +28,33 @@
 
 /* END CHART CHANGES */
 
-body {
+/*body {
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}*/
+
+.row {
   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
+
 #stageChart {
   margin-bottom: 15px;
   min-width: 290px;
 }
 #selectTeam1 {
-  margin-left: 21px;
+  margin-left: 20px;
   margin-top: 15px;
   text-align: left;
   min-width:155px;
 }
 #selectTeam2 {
-  margin-left: 15px;
+  margin-left: 20px;
   margin-top: 15px;
   text-align: left;
   min-width:155px;
 }
 
 #winnersChart {
-  margin-left: 15px;
+  margin-left: 20px;
   margin-top: 15px;
   padding-right: 0;
   padding-left: 0;
@@ -88,6 +93,12 @@ body {
   }
 }*/
 
+/*@media (min-width: 1050px){
+  .container {
+    max-width: 1140px;
+  }
+}*/
+
 @media (min-width: 980px) {
   .container {
       max-width: 1000px;
@@ -110,11 +121,4 @@ body {
 
 .row {
   margin-top: 5px;
-}
-
-.sub-heading {
-  color: #5b5b5b;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
 }

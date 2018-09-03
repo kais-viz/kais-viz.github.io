@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Kais Kawar">
-    <title>World Electricity Generation</title>
+    <title>Countries that gained independence from the UK</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="css/portfolio-item.css" rel="stylesheet">
-    <link href="css/elec-production.css" rel="stylesheet">
+    <link href="css/uk-independent.css" rel="stylesheet">
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="js/uk-independent.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -28,12 +29,12 @@
               <a class="nav-link" href="index.html#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="elec-production.html">Multi-line Chart
-                <span class="sr-only">(current)</span>
-              </a>
+              <a class="nav-link" href="elec-production.html">Multi-line Chart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="uk-independent.html">Mercator Projection</a>
+              <a class="nav-link" href="uk-independent.html">Mercator Projection
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard.html">Dashboard</a>
@@ -45,30 +46,28 @@
 
     <!-- Page Content -->
     <div class="container" id="body">
-      <!-- Portfolio Item Heading -->
-      <h1 class="my-4">World Electricity Generation</h1>
-      <p class="sub-heading">A multi-line graph illustrating the sources used to generate electric power</p>
-      <!-- Portfolio Item Row -->
-      <div class="row">
-        
+      <h1 class="my-4">Countries that have gained independence from the UK</h1>
+      <p class="sub-heading">A storytelling data visualisation using a mercator projection lighting up countries that gained their independence from the UK.</p>
 
-        <div class="col-md-8 chart-wrapper" id="chart-wrapper">
-          <svg preserveAspectRatio="xMinYMid meet"  viewBox="0 0 960 500"></svg>
-          <!-- <img class="img-fluid" src="http://placehold.it/750x500" alt=""> -->
+      <div class="row justify-content-md-center" id="map-wrapper">
+        <div class="col-sm-12" id="mercator-map">
         </div>
+      </div>
 
-        <div class="col-md-4" id="description">
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-7">
           <h3 class="my-3">Project Description</h3>
-          <p>This graph showcases the percentages of the world's total primary energy supply that is used to generate electric power.</p>
-          <p>The main outcome of this project was to showcase my ability in creating a multi-line graph that is responsive and gives tooltips for exactly x-axis values.</p>
+          <p>A <a href="https://d3js.org/">D3.js</a> storytelling visualization using a mercator projection map, lighting up countries that gained their indepdendnce from the UK one by one.</p>
+          <p>After the animated visualization ends, the map becomes interactive with the ability to hover and a tooltip appearing showing the name of the country and the indepdendence date if applicable.</p>
+        </div>
+        <div class="col-md-5">
           <h3 class="my-3">Project Technicals</h3>
           <ul>
-            <li>Graph created using <a href="https://d3js.org/">d3.js v5</a> library</li>
-            <li>Data collected from the <a href="https://data.worldbank.org/">World Bank Open Data</a></li>
-            <li>Data format is CSV</li>
-            <li>The Multi-line graph is responsive and will adjust to any screen size</li>
-            <li>Colours representing the sources used in the lines/legend have different hues representing different values, generated from <a href="http://colorbrewer2.org/">Color Brewer 2.0</a></li>
-            <li>Tooltip showing percentages appears on hover</li>
+            <li>The map was created using <a href="https://d3js.org/">d3.js v5</a> library</li>
+            <li>Geo.json data was collected from <a href="https://github.com/johan/world.geo.json/blob/master/countries.geo.json">Johan's github repository</a></li>
+            <li>Data format is in CSV (country/independence date) and JSON (geo)</li>
+            <li>The map is responsive and will adjust to any screen size</li>
+            <li>Tooltip showing countries and independence date appears on hover</li>
           </ul>
         </div>
       </div>
@@ -80,8 +79,6 @@
         <p class="m-0 text-center text-white">Copyright &copy; Kais Viz 2018</p>
       </div>
     </footer>
-
-    <script type="text/javascript" src="js/elec-production.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

@@ -20,22 +20,28 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Kais Viz</a>
+        <a class="navbar-brand" href="index.html">Kais Viz</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="elec-production.html">Multi-line Chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="uk-independent.html">Mercator Projection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
         </div>
@@ -46,13 +52,6 @@
     <div class="container" id="body">
       <h1 class="my-4">FIFA World Cup Dashboard</h1>
       <p class="sub-heading">An interactive visual dashboard with instant filters enabled to help you explore the world cup attendance over the years.</p>
-<!--       <div class="row justify-content-md-center" id="page-header">
-        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 col-xl-12 " > 
-          <h1>Welcome to our World Cup Dashboard</h1>
-          <p>Filter on the visualizations below and explore the FIFA World Cup attendance over the years.</p>
-          <hr>
-        </div>
-      </div> -->
 
       <div class="row justify-content-md-center" id="attendanceChart-wrapper">
         <div class="col-sm-12"> 
@@ -80,10 +79,31 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" id="stageChart"></div>
+        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" id="stageChart"><div style="margin-left: 7px;margin-top: 15px;">Stage</div></div>
 
         <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" id="winnersChart">
             <div class="chart-title">Winners</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <h3 class="my-3">Project Description</h3>
+          <p>A Dashboard showing multiple charts to explore, using filters, the historical attendance of the FIFA world cup.</p>
+          <p>The main chart is a Bar Chart, clicking on it will filter the data to that year. Multiple filters can be selected at once. There are 2 selectable lists showing the home and away teams, they will be filtered along side the bar chart and the column chart. The column chart shows the stages of the tournament for that year (it changes in format over the years). Finally the winners pie chart, it only shows the total winners of the world cup, but filters do not apply on it.</p>
+          <p>It is created using <a href="https://dc-js.github.io/dc.js/">DC.js</a>, which is a charting library with native <a href="http://crossfilter.github.io/crossfilter/">crossfilter</a> support.</p>
+          <p>DC.js library allows for the creation of multiple charts that can be natively supported by crossfilter which makes it easier to filter on one chart and allow for those filter to take effects on the rest of the dashboard.</p>
+        </div>
+        <div class="col-md-5">
+          <h3 class="my-3">Project Technicals</h3>
+          <ul>
+            <li>Dashboard created using <a href="https://dc-js.github.io/dc.js/">dc.js</a> Charting Library</li>
+            <li><a href="http://square.github.io/crossfilter/">Crossfilter</a> library used to allow for fast multidimensional filtering for coordinated views. For example, if you pick a home team and an away team, it will show you all the matches they played and in what stage/year it was. The only exception here is the pie chart, its made to only show the winners by percentage and does not include the filter feature</li>
+            <li>Data format is in TSV</li>
+            <li>The dashboard is responsive and will adjust to all screen sizes</li>
+            <li>Colours used in the bars/legend/pie chart have different hues representing different values, generated from <a href="http://colorbrewer2.org/">Color Brewer 2.0</a></li>
+            <li>Tooltip appears on hover showing various data depending on the chart</li>
+          </ul>
         </div>
       </div>
     </div>

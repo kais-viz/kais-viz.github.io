@@ -1,7 +1,151 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <title>Kais Kawar's Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kais Viz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="elec-production.html">Multi-line Chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="uk-independent.html">Mercator Projection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+<!--             <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="" height="" width="300">
+        <h1 class="text-uppercase mb-0">Portfolio</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">Web Developer - D3 Data Visualizations</h2>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4" id="portfolio">My Portfolio
+        <small>A small collection of projects demonstrating my ability to use the d3.js and dc.js libraries in order to create interactive charts</small>
+      </h1>
+
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="elec-production.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="img/elec-production.png" alt="Clectricity Production">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>World Electricity Generation</h3>
+          <p>A multi-line graph illustrating the percentages of the world's total primary energy supply that is used to generate electric power.</p>
+          <p>The main outcome of this project was to showcase my ability in creating a multi-line graph that is responsive and gives tooltips for exactly x-axis values.</p>
+          <a class="btn btn-primary" href="elec-production.html">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Two -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="uk-independent.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="img/uk-independent.png" alt="UK Independent">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Countries that gained independence from the UK</h3>
+          <p>A <a href="https://d3js.org/">D3.js</a> storytelling visualization using a mercator projection to draw the map, lighting up countries that gained their indepdendnce from the UK.</p>
+          <p>After the animated visualization ends, the map becomes interactive with the ability to hover over it and a tooltip appears showing the name of the country and the indepdendence day if applicable.</p>
+          <a class="btn btn-primary" href="uk-independent.html">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="dashboard.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="img/dashboard.png" alt="Dashboard">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>FIFA World Cup Dashboard</h3>
+          <p>A FIFA World Cup dashboard focusing on exploring the number of attendees of the world cup over the years.</p>
+          <p>It is created using <a href="https://dc-js.github.io/dc.js/">DC.js</a>, which is a charting library with native <a href="http://crossfilter.github.io/crossfilter/">crossfilter</a> support.</p>
+          <p>DC.js library allows for the creation of multiple charts that can be natively supported by crossfilter which makes it easier to filter on one chart and allow for those filter to take effects on the rest of the dashboard.</p>
+          <a class="btn btn-primary" href="dashboard.html">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- <hr> -->
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Kais Viz 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>

@@ -1,3 +1,33 @@
+//parse date as year
+var parse = d3.timeParse("%Y");
+
+d3.csv("data/elec-production.csv").then(function(data) {
+  data.forEach(function(d){
+    d.year = parse(d.year);
+    d.renewable = Math.round(+d.renewable * 10) / 10;
+    d.oil = Math.round(+d.oil * 10) / 10;
+    d.nuclear = Math.round(+d.nuclear * 10) / 10;
+    d.coal = Math.round(+d.coal * 10) / 10;
+    d.natural_gas = Math.round(+d.natural_gas * 10) / 10;
+    d.hydroelectric = Math.round(+d.hydroelectric * 10) / 10;
+    d.max = d3.max(Object.values(d).slice(1));
+    d.min = d3.min(Object.values(d).slice(1));
+  })
+
+  var targetWidth = parseInt(d3.select("#chart-wrapper").style("width")),
+  aspect = 1.92;//known value
+  tempWidth = targetWidth - margin.left - margin.right;
+  targetHeight = targetWidth/aspect;
+  tempHeight = targetHeight - margin.top - margin.bottom;
+  svg.attr("viewBox", "0 0 " + targetWidth + " " + Math.round(targetHeight));
+  
+  draw(data, tempWidth , tempHeight);
+
+  d3.select(window).on("resize.#chart-wrapper", function() {
+    resize(data);
+  });
+});
+
 var svg = d3.select("svg").attr("id", "chart");
 var svgWidth = parseInt(svg.style('width'), 10),
 	svgHeight = parseInt(svg.style('height'), 10),
@@ -207,33 +237,3 @@ function resize(data) {
   svg.attr("viewBox", "0 0 " + targetWidth + " " + Math.round(targetWidth / aspect));
   draw(data, width, width/aspect);
 }
-
-//parse date as year
-var parse = d3.timeParse("%Y");
-
-d3.csv("data/sourcest.csv").then(function(data) {
-  data.forEach(function(d){
-    d.year = parse(d.year);
-    d.renewable = Math.round(+d.renewable * 10) / 10;
-    d.oil = Math.round(+d.oil * 10) / 10;
-    d.nuclear = Math.round(+d.nuclear * 10) / 10;
-    d.coal = Math.round(+d.coal * 10) / 10;
-    d.natural_gas = Math.round(+d.natural_gas * 10) / 10;
-    d.hydroelectric = Math.round(+d.hydroelectric * 10) / 10;
-    d.max = d3.max(Object.values(d).slice(1));
-    d.min = d3.min(Object.values(d).slice(1));
-  })
-
-  var targetWidth = parseInt(d3.select("#chart-wrapper").style("width")),
-  aspect = 1.92;//known value
-  tempWidth = targetWidth - margin.left - margin.right;
-  targetHeight = targetWidth/1.92;
-  tempHeight = targetHeight - margin.top - margin.bottom;
-  svg.attr("viewBox", "0 0 " + targetWidth + " " + Math.round(targetWidth/1.92));
-  
-  draw(data, tempWidth , tempHeight);
-
-  d3.select(window).on("resize.#chart-wrapper", function() {
-    resize(data);
-  });
-});

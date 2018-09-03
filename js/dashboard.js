@@ -1,5 +1,5 @@
 //Load CSV file, then draw the dashboard
-d3.tsv("data/world_cup_geo.tsv").then(function(tsv_file) {
+d3.tsv("data/world_cup_data.tsv").then(function(tsv_file) {
     tsv_file.forEach(function(d){
         goals = d.goals.split('-');
         d.team1_goals = +goals[0];
@@ -57,8 +57,8 @@ function draw(tsv_data) {
     rowChartOrder = ["GROUP STAGE","1/8 FINAL","1/4 FINAL","1/2 FINAL","PLACES 3-4","FINAL ROUND","FINAL"];
 
     rowChart
-        .width(280).height(230)
-        .margins({top: 35, right: 20, bottom: 30, left: 7})
+        .width(280).height(202)
+        .margins({top: 1, right: 20, bottom: 30, left: 7})
         .elasticX(true)
         .dimension(wcStage)
         .group(wcStage.group())
