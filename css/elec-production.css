@@ -57,6 +57,11 @@ text.text-tooltip {
     padding-left: 0;
 }
 
+@media (max-width: 768px){
+  #description {
+    padding-left: 15px;
+  }
+}
 
 /* START LEGEND CSS */
 .legend  {
@@ -68,6 +73,7 @@ text.text-tooltip {
     padding: 10px 40px;
 
 }
+
 .legend > div {
     margin: 0px 25px 10px 0px;
     flex-grow: 0;
