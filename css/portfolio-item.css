@@ -22,6 +22,8 @@ body {
   font-weight: 700;
 }
 
+
+
 /* Keep footer down */
 
 html, body {
@@ -70,6 +72,32 @@ html, body {
     max-width: 1140px;
   }
 }
+
+.mt-4, .my-4 {
+    margin-top: 2rem!important;
+}
+
+/* Font changes for mobile view */
+@media (max-width: 768px) {
+  .h1, h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .h3, h3 {
+    font-size: 1.55rem;
+  }
+
+  .row p {
+    font-size: 0.95rem;
+  }
+
+  #description li{
+    margin-bottom: 2px;
+  }
+}
+
+
 
 
 
