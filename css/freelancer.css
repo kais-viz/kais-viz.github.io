@@ -395,9 +395,22 @@ body {
   font-weight: 700;
 }
 
+/* Body */
 header.masthead {
     padding-top: 6rem!important;
     padding-bottom: 6rem;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 3.5rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 3.5rem!important;
+}
+
+.project-row {
+    margin-bottom: 3em;
+    margin-top: 3em;
 }
 
 /* Footer */
