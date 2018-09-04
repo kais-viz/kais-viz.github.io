@@ -22,7 +22,12 @@ body {
   font-weight: 700;
 }
 
-
+@media (min-width: 600px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 
 /* Keep footer down */
 

@@ -33,7 +33,7 @@ var svgWidth = parseInt(svg.style('width'), 10),
 	svgHeight = parseInt(svg.style('height'), 10),
 	aspect = svgWidth / svgHeight;
 
-var margin = {top: 20, right: 45, bottom: 30, left: 40},
+var margin = {top: 20, right: 50, bottom: 30, left: 50},
     width = svgWidth - margin.left - margin.right,
     height = svgHeight - margin.top - margin.bottom;
 // add viewBox and preserveAspectRatio properties,

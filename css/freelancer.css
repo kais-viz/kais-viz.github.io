@@ -385,9 +385,7 @@ a.btn.btn-primary {
   border-color: #1a252f;
 }
 
-body {
-  padding-top: 54px;
-}
+
 
 /* Header */
 .navbar-brand{
@@ -395,22 +393,21 @@ body {
   font-weight: 700;
 }
 
-/* Body */
 header.masthead {
     padding-top: 6rem!important;
     padding-bottom: 6rem;
 }
 
-.mb-4, .my-4 {
-    margin-bottom: 3.5rem!important;
-}
-.mt-4, .my-4 {
-    margin-top: 3.5rem!important;
+/* Body */
+body {
+  padding-top: 54px;
 }
 
-.project-row {
-    margin-bottom: 3em;
-    margin-top: 3em;
+@media (min-width: 600px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* Footer */
@@ -438,6 +435,18 @@ header.masthead {
   .row p {
     font-size: 0.95rem;
   }
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 3.5rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 3.5rem!important;
+}
+
+.project-row {
+    margin-bottom: 3em;
+    margin-top: 3em;
 }
 
 
