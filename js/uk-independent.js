@@ -98,7 +98,7 @@ function draw(geoData, dataIndep) {
   // update title of the page with the current country, ordered alphabetically for now
   function updateHeader(country) {
     d3.select("h1")
-    .text(country + "Countries that have gained its independence from the UK on " + getYear(country));
+    .text(country + " gained its independence from the UK on " + getYear(country));
     // .text("Countries that have gained independence from the UK - " + country);
 
     svg.selectAll('path')
